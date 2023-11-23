@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ProductPage from './pages/ProductPage';
 import ProductDetails from './pages/ProductDetails';
+import NewRobotForm from './pages/NewRobotForm';
 
 function App() {
   const [robots, setRobots] = useState(robotList);
@@ -23,6 +24,7 @@ function App() {
             setCartNumber={setCartNumber}
           />}
         />
+        <Route path='/products/new' element={<NewRobotForm setRobots={setRobots} />} />
         <Route path='/products/:index'
           element={<ProductDetails />}
         />
