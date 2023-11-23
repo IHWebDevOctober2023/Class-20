@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./navBar.css";
 import robotJson from '../robot_products.json'
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
 
@@ -17,7 +18,9 @@ const NavBar = (props) => {
 
     return (
         <nav id="navbar-element">
-            <h1>RoboZon.com</h1>
+            <Link to="/products">
+                <h1>RoboZon.com</h1>
+            </Link>
             <div>
                 <input onChange={(event) => handleSearch(event.target.value)} id="search-input" type="search" placeholder="Search robot" /><span id="magni-icon">🔍</span>
             </div>
